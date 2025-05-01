@@ -21,7 +21,8 @@
       "is_today_pick": true,
       "is_trending": true
     },
-    "production": true
+    "production": true,
+    "category": "Breaking News"
   },
   {
     "id": "23456789abcdef0123456789",
@@ -75,7 +76,8 @@
       "is_today_pick": true,
       "is_trending": true
     },
-    "production": true
+    "production": true,
+    "category": "Business"
   },
   {
     "id": "defabc0123456789defabc01",
@@ -99,7 +101,8 @@
       "is_today_pick": false,
       "is_trending": false
     },
-    "production": true
+    "production": true,
+    "category": "All News"
   },
   {
     "id": "efabcd0123456789efabcd01",
@@ -123,7 +126,8 @@
       "is_today_pick": true,
       "is_trending": true
     },
-    "production": true
+    "production": true,
+    "category": "All News"
   },
   {
     "id": "fabcde0123456789fabcde01",
@@ -225,7 +229,8 @@
       "is_today_pick": false,
       "is_trending": false
     },
-    "production": true
+    "production": true,
+    "category": "All News"
   },
   {
     "id": "efabcd9876543210efabcd98",
@@ -279,7 +284,8 @@
       "is_today_pick": true,
       "is_trending": true
     },
-    "production": true
+    "production": true,
+    "category": "All News"
   },
   {
     "id": "bcdef0123456789abcdef01234",

@@ -5,7 +5,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import About from "../components/About";
 import Career from "../components/Career";
-import Category from "../pages/Category";
+
+import HeroContent from "../components/HeroContent";
 
 export const router = createBrowserRouter([
   {
@@ -33,8 +34,8 @@ export const router = createBrowserRouter([
         Component: Career,
       },
       {
-        path: "/category/:id",
-        Component: Category,
+        path: "/categories/:id",
+        Component: HeroContent,
       },
     ],
   },

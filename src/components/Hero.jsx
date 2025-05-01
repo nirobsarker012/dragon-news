@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Navbar from "./Navbar";
 import LeftAside from "./homelayout/leftAside";
@@ -6,6 +6,7 @@ import RightAside from "./homelayout/RightAside";
 import HeroContent from "./HeroContent";
 
 const Hero = () => {
+  const [category, setCategory] = useState([]);
   return (
     <div>
       <main className="container py-7">
@@ -28,12 +29,12 @@ const Hero = () => {
           <Navbar />
         </div>
         {/* Hero Content */}
-        <div className="mx-auto my-3 *:border grid grid-cols-12">
+        <div className="mx-auto my-3 grid justify-between grid-cols-12">
           <aside className="col-span-3">
-            <LeftAside />
+            <LeftAside setCategory={setCategory} />
           </aside>
           <section className="col-span-6">
-            <HeroContent />
+            <HeroContent category={category} />
           </section>
           <aside className="col-span-3">
             <RightAside />
