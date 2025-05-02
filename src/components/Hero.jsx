@@ -29,7 +29,7 @@ const Hero = () => {
           <Navbar />
         </div>
         {/* Hero Content */}
-        <div className="mx-auto my-3 grid justify-between grid-cols-12">
+        <div className="mx-auto my-3 gap-5 grid justify-between grid-cols-12">
           <aside className="col-span-3">
             <LeftAside setCategory={setCategory} />
           </aside>
