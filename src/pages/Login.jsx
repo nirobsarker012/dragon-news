@@ -15,7 +15,7 @@ const Login = () => {
             Email address
           </label>
           <input
-            className="border-none outline-none bg-[#F3F3F3] text-[16px] p-5"
+            className="border-none outline-none bg-[#F3F3F3] text-[16px] p-5 rounded-[5px]"
             type="email"
             name="email"
             id=""
@@ -25,7 +25,7 @@ const Login = () => {
             Password
           </label>
           <input
-            className="border-none outline-none bg-[#F3F3F3] text-[16px] p-5"
+            className="border-none outline-none bg-[#F3F3F3] text-[16px] p-5 rounded-[5px]"
             type="password"
             name="password"
             id=""
