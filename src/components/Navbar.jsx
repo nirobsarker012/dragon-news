@@ -1,11 +1,9 @@
-import React from "react";
 import { NavLink } from "react-router";
 import userImage from "../assets/user.png";
 
 const Navbar = () => {
   return (
     <div className="container flex justify-between items-center">
-      <div></div>
       <ul className="flex justify-center items-center gap-4 text-[#706F6F] text-[18px]">
         <li>
           <NavLink
