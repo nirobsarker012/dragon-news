@@ -8,13 +8,16 @@ import {
 import { auth } from "../firebase/auth_firebase";
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   console.log(user);
   const createAuth = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   //signin
   const signIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   //   handle LogOut
@@ -25,6 +28,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unSubcribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unSubcribe();
@@ -36,6 +40,8 @@ const AuthProvider = ({ children }) => {
     createAuth,
     logOut,
     signIn,
+    loading,
+    setLoading,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

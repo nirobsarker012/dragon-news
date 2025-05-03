@@ -1,8 +1,9 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const Login = () => {
+  const navigation = useNavigate();
   const { signIn } = use(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -50,6 +51,9 @@ const Login = () => {
             placeholder="Enter your password"
           />
           <button
+            onClick={() => {
+              navigation("/");
+            }}
             type="submit"
             className="bg-[#403F3F] text-white w-full py-4 rounded-[5px] cursor-pointer font-semibold"
           >

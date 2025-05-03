@@ -9,6 +9,7 @@ import Career from "../components/Career";
 import HeroContent from "../components/HeroContent";
 import AuthLayout from "../components/AuthLayout";
 import NewsDetails from "../components/NewsDetails";
+import PrivateRouter from "../contexts/PrivateRouter";
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/news-details/:id",
-        Component: NewsDetails,
+        element: (
+          <PrivateRouter>
+            <NewsDetails />
+          </PrivateRouter>
+        ),
         loader: () => fetch(`../news.json`),
       },
       {
