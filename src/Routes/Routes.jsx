@@ -7,6 +7,7 @@ import About from "../components/About";
 import Career from "../components/Career";
 
 import HeroContent from "../components/HeroContent";
+import AuthLayout from "../components/AuthLayout";
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +37,20 @@ export const router = createBrowserRouter([
       {
         path: "/categories/:id",
         Component: HeroContent,
+      },
+      {
+        path: "/auth",
+        element: <AuthLayout />,
+        children: [
+          {
+            path: "/auth/login",
+            Component: Login,
+          },
+          {
+            path: "/auth/register",
+            Component: Register,
+          },
+        ],
       },
     ],
   },

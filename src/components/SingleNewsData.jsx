@@ -8,7 +8,7 @@ import { FaEye } from "react-icons/fa";
 const SingleNewsData = ({ singleData }) => {
   //   console.log(singleData);
   return (
-    <div className=" w-full border border-[#E7E7E7]">
+    <div className=" max-w-[558px] mx-auto border border-[#E7E7E7]">
       <div className="bg-[#F3F3F3] w-full py-6 px-[20px]">
         <div className="flex justify-between items-start">
           <div className="flex items-center gap-3">

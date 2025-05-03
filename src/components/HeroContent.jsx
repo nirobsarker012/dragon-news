@@ -38,7 +38,9 @@ const HeroContent = ({ category }) => {
 
   return (
     <div>
-      <h2>Dragon News Home</h2>
+      <h2 className="text-[20px] text-[#403F3F] mb-5 font-semibold">
+        Dragon News Home
+      </h2>
       <div className="space-y-5">
         {filteredNewsData?.length > 0 ? (
           filteredNewsData?.map((singleData) => (

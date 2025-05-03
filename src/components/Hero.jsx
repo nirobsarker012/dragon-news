@@ -30,13 +30,13 @@ const Hero = () => {
         </div>
         {/* Hero Content */}
         <div className="mx-auto my-3 gap-5 grid justify-between grid-cols-12">
-          <aside className="col-span-3">
+          <aside className="col-span-3 top-0 sticky h-fit">
             <LeftAside setCategory={setCategory} />
           </aside>
           <section className="col-span-6">
             <HeroContent category={category} />
           </section>
-          <aside className="col-span-3">
+          <aside className="col-span-3 top-0 sticky h-fit">
             <RightAside />
           </aside>
         </div>

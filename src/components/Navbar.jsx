@@ -41,7 +41,10 @@ const Navbar = () => {
       {/* Login from */}
       <div className="flex items-center gap-2">
         <img src={userImage} alt="" />
-        <NavLink className="text-white text-[20px] bg-[#403F3F] py-2 px-8">
+        <NavLink
+          to={"/auth/login"}
+          className="text-white text-[20px] bg-[#403F3F] py-2 px-8"
+        >
           Login
         </NavLink>
       </div>
