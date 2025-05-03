@@ -8,6 +8,7 @@ import Career from "../components/Career";
 
 import HeroContent from "../components/HeroContent";
 import AuthLayout from "../components/AuthLayout";
+import NewsDetails from "../components/NewsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ export const router = createBrowserRouter([
       {
         path: "/career",
         Component: Career,
+      },
+      {
+        path: "/news-details/:id",
+        Component: NewsDetails,
+        loader: () => fetch(`../news.json`),
       },
       {
         path: "/categories/:id",

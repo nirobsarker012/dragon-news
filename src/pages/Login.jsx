@@ -1,7 +1,23 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const Login = () => {
+  const { signIn } = use(AuthContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(`Email`, email, `Password`, password);
+    signIn(email, password)
+      .then((res) => {
+        const user = res.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
   return (
     <div className="bg-white py-[76px] px-[73px] rounded-[5px] max-w-[752px] mx-auto shadow-lg">
       <div className="py-5 border-b border-[#E7E7E7]">
@@ -10,7 +26,8 @@ const Login = () => {
         </h2>
       </div>
       <div>
-        <form className="flex flex-col gap-6 mt-10">
+        <form onSubmit={handleLogin} className="flex flex-col gap-6 mt-10">
+          {/* Email */}
           <label className="text-[20px] font-semibold text-[#403F3F]">
             Email address
           </label>
@@ -21,6 +38,7 @@ const Login = () => {
             id=""
             placeholder="Enter your email address"
           />
+          {/* Password */}
           <label className="text-[20px] font-semibold text-[#403F3F]">
             Password
           </label>
@@ -31,7 +49,10 @@ const Login = () => {
             id=""
             placeholder="Enter your password"
           />
-          <button className="bg-[#403F3F] text-white w-full py-4 rounded-[5px] cursor-pointer font-semibold">
+          <button
+            type="submit"
+            className="bg-[#403F3F] text-white w-full py-4 rounded-[5px] cursor-pointer font-semibold"
+          >
             Login
           </button>
         </form>

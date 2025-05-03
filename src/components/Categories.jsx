@@ -5,8 +5,6 @@ const categoriesPromise = fetch(`/public/categories.json`).then((res) =>
 const Categories = ({ setCategory }) => {
   const categories = use(categoriesPromise);
 
-  console.log({ categories });
-
   //   const { id } = categories;
   //   console.log(categories);
   return (

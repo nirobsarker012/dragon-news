@@ -50,7 +50,10 @@ const SingleNewsData = ({ singleData }) => {
           <p className="line-clamp-4 text-[16px] leading-6">
             {singleData.details}
           </p>
-          <Link className="text-transparent bg-clip-text bg-gradient-to-l from-[#FF8C47] to-[#F75B5F] text-[16px] font-semibold mt-4">
+          <Link
+            to={`/news-details/${singleData.id}`}
+            className="text-transparent bg-clip-text bg-gradient-to-l from-[#FF8C47] to-[#F75B5F] text-[16px] font-semibold mt-4"
+          >
             Read More
           </Link>
         </div>
