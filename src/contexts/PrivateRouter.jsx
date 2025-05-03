@@ -8,7 +8,7 @@ const PrivateRouter = ({ children }) => {
   if (loading) {
     return <Loading />;
   }
-  console.log(user);
+  //   console.log(user);
   if (user && user?.email) {
     return children;
   }

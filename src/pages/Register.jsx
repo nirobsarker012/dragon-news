@@ -3,31 +3,38 @@ import { Link } from "react-router";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const Register = () => {
-  const { createAuth, setUser } = use(AuthContext);
+  const { createAuth, setUser, updateUser } = use(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const link = e.target.link.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const check_box = e.target.check.checked;
-    console.log(
-      `name:`,
-      name,
-      `link:`,
-      link,
-      `email:`,
-      email,
-      `password:`,
-      password,
-      `checkbox:`,
-      check_box
-    );
+    // const check_box = e.target.check.checked;
+    // console.log(
+    //   `name:`,
+    //   name,
+    //   `link:`,
+    //   link,
+    //   `email:`,
+    //   email,
+    //   `password:`,
+    //   password,
+    //   `checkbox:`,
+    //   check_box
+    // );
     createAuth(email, password)
       .then((res) => {
         const user = res.user;
         // console.log(user);
-        setUser(user);
+        updateUser({ displayName: name, photoURL: link })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: link });
+          })
+          .catch((error) => {
+            console.error(error);
+            setUser(user);
+          });
       })
       .catch((err) => {
         console.error(err);

@@ -10,6 +10,7 @@ import HeroContent from "../components/HeroContent";
 import AuthLayout from "../components/AuthLayout";
 import NewsDetails from "../components/NewsDetails";
 import PrivateRouter from "../contexts/PrivateRouter";
+import Loading from "../components/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,7 @@ export const router = createBrowserRouter([
           </PrivateRouter>
         ),
         loader: () => fetch(`../news.json`),
+        hydrateFallbackElement: <Loading />,
       },
       {
         path: "/categories/:id",

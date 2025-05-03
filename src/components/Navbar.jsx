@@ -52,7 +52,7 @@ const Navbar = () => {
       </ul>
       {/* Login from */}
       <div className="flex items-center gap-2">
-        <img src={userImage} alt="" />
+        <img src={`${user ? user.photoURL : userImage}`} alt="" />
         {user ? (
           <button
             onClick={() => {

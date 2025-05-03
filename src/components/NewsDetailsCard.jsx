@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { FaArrowLeft } from "react-icons/fa6";
 
 const NewsDetailsCard = ({ news }) => {
-  console.log(news);
+  // console.log(news);
   return (
     <div>
       <h3 className="text-[20px] text-[#403F3F] font-semibold ">Dragon News</h3>

@@ -13,6 +13,7 @@ const Categories = ({ setCategory }) => {
       <div className="grid grid-cols-1 mt-5 gap-2">
         {categories.map((singleCategory) => (
           <div
+            key={Math.random()}
             onClick={() => setCategory(singleCategory?.name)}
             className={
               "hover:bg-[#E7E7E7] rounded-[5px] py-2 px-4 font-semibold text-center hover:text-[#403F3F] text-[16px] bg-white text-[#9F9F9F] transition-all duration-300"
