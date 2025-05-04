@@ -1,7 +1,5 @@
 import React, { use } from "react";
-const categoriesPromise = fetch(`/public/categories.json`).then((res) =>
-  res.json()
-);
+const categoriesPromise = fetch(`/categories.json`).then((res) => res.json());
 const Categories = ({ setCategory }) => {
   const categories = use(categoriesPromise);
 
@@ -11,7 +9,7 @@ const Categories = ({ setCategory }) => {
     <div>
       <h2 className="font-bold">All Categories</h2>
       <div className="grid grid-cols-1 mt-5 gap-2">
-        {categories.map((singleCategory) => (
+        {categories?.map((singleCategory) => (
           <div
             key={Math.random()}
             onClick={() => setCategory(singleCategory?.name)}

@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
             <NewsDetails />
           </PrivateRouter>
         ),
-        loader: () => fetch(`../news.json`),
+        loader: () => fetch(`/news.json`),
         hydrateFallbackElement: <Loading />,
       },
       {
